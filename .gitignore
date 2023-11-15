@@ -1,0 +1,7 @@
+*.pyc  
+*~  
+__pycache__    
+.DS_Store  
+scrape_test.py
+test_db.py
+economics/.env
