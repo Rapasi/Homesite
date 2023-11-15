@@ -1,0 +1,75 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+
+<html>
+<head>
+    <title>Data Display</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>  <!-- Include Chart.js -->
+
+</head>
+<body>
+
+<h1>ECB Deposit facility</h1>
+
+<table border="1" id="dataTable">
+    <thead>
+        <tr>
+            <th>Data Updated</th>
+            <th>The Current Deposit Facility Rate</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Data will go here -->
+    </tbody>
+</table>
+
+
+<canvas id="dataChart" width="400" height="200"></canvas>
+
+<h1>ECB Marginal Lending Facility Data</h1>
+
+<!-- Display the table for second dataset -->
+<table border="1" id="dataTableMLF">
+    <thead>
+        <tr>
+            <th>Data Updated</th>
+            <th>The Current Marginal Lending Facility</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Data will go here -->
+    </tbody>
+</table>
+
+
+
+<canvas id="dataChartMLF" width="400" height="200"></canvas>
+
+<h1>ECB Main refinancing operations - fixed rate tenders</h1>
+
+<table border="1" id="dataTableMRO">
+    <thead>
+        <tr>
+            <th>Data Updated</th>
+            <th>Main refinancing operations - fixed rate tenders </th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Data will go here -->
+    </tbody>
+</table>
+
+
+<canvas id="dataChartMRO" width="400" height="200"></canvas>
+
+<script src="{% static 'js/script.js' %}"></script>
+  
+
+</body>
+</html>
+
+</body>
+</html>

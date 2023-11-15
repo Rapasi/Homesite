@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Professional Links</title>
+    <link rel="stylesheet" href="{% static 'css/front_page.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to My Personal Page</h1>
+        <p>My name is Rami Erkkilä and I'm currently studying economics at the University of Helsinki.</p>
+        <p>Here you can find my personal links:</p>
+        <div class="links">
+            <a href="https://github.com/Rapasi" target="_blank" class="link github">GitHub</a>
+            <a href="https://www.linkedin.com/in/rami-erkkil%C3%A4/" target="_blank" class="link linkedin">LinkedIn</a>
+        
+        </div>
+        <p>Some links for webpages I have created:</p>
+        <div class="links">
+            <a href="{% url 'display_page' %}" class="link routes">Interest rates</a>
+        </div>
+    </div>
+</body>
+</html>
