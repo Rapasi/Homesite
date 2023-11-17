@@ -1,0 +1,41 @@
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 0.9em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+}
+
+th, td {
+    border: 1px solid #6e6e6e;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: #009879;
+    color: white;
+    text-transform: uppercase;
+}
+
+/* Striped Rows */
+tr:nth-child(even) {
+    background-color: #f3f3f3;
+}
+
+/* Hover Effect for Rows */
+tr:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+
+/* Styling Images */
+img {
+    max-width: 200px;
+    height: auto;
+}
+
+
+

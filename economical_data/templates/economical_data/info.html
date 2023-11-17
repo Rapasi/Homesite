@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Information</title>
+    <link href="{% static 'css/search_table.css' %}" rel="stylesheet">
+</head>
+<body>
+    {% if error_message %}
+        <p style="font-size: larger; font-weight: bold;">{{ error_message }}</p>
+    {% else %}
+    <h1>Company Information</h1>
+    
+    {% if info_data %}
+    {% if info_data.logo %}
+            <img src="{{ info_data.logo }}" alt="Company Logo">
+        {% endif %}    
+    <table>
+
+            </thead>
+            <tbody>
+                {% for key, value in info_data.items %}
+                  {% if key != 'logo' %}
+                    <tr>
+                        <td>{{ key }}</td>
+                        <td>
+                        {% if key == 'weburl' %}
+                            <a href="{{ value }}" target="_blank">{{ value }}</a>
+                        {% else %}
+                            {{ value }}
+                        {% endif %}
+                        <td>
+                    </tr>
+                    {% endif %}
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>No information available.</p>
+    {% endif %}
+    {% endif %}
+</body>
+</html>

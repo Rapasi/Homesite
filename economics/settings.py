@@ -26,8 +26,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY=getenv("DJANGO_SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-
-DEBUG = DEBUG = os.environ.get("DJANGO_DEBUG", "False") == "True"
+DEBUG  = os.environ.get("DJANGO_DEBUG", "False") == "True"
 ALLOWED_HOSTS = ["127.0.0.1","rapasi.ddns.net"]
 
 # Application definition

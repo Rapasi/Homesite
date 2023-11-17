@@ -1,0 +1,42 @@
+{% load static %} <!-- If you're using static files -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Page</title>
+    <link href="{% static 'css/search_table.css' %}" rel="stylesheet"> 
+</head>
+<body>
+    <h2>Search for stock information</h2>
+    <form method="get" action="{% url 'search' %}">
+        {{ form.as_p }}
+        <button type="submit">Search</button>
+    </form>
+
+    <!-- Display Results -->
+    {% if results %}
+        <h2>Results</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Symbol</th>
+                    <th>Description</th>
+                    <th>Display Symbol</th>
+                    <th>Type</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in results %}
+                    <tr>
+                        <td><a href="{% url 'info' %}?symbol={{ item.symbol }}">{{ item.symbol }}</a></td>
+                        <td>{{ item.description }}</td>
+                        <td>{{ item.displaySymbol }}</td>
+                        <td>{{ item.type }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>No results found.</p>
+    {% endif %}
+</body>
+</html>
