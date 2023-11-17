@@ -60,7 +60,7 @@ def display_page(request):
 
 def front_page(request):
     return render(request, 'index.html')
-
+ 
 def search_view(request):
     if request.method == 'GET':
         form = SearchForm(request.GET)

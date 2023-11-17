@@ -24,7 +24,7 @@ th {
 tr:nth-child(even) {
     background-color: #f3f3f3;
 }
-
+ 
 /* Hover Effect for Rows */
 tr:hover {
     background-color: #f1f1f1;

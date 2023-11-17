@@ -9,4 +9,4 @@ urlpatterns = [
     path('rates/api/get_ECB_MRO/', views.get_ECB_MRO, name='get_ECB_MRO'),
     path('search/', views.search_view, name='search'),
     path('info/', views.info_view, name='info'),
-]
+] 
