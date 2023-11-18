@@ -7,6 +7,7 @@ import finnhub
 from economical_data.models import GeneralFinancialData
 from os import getenv
 from .forms import SearchForm
+import yfinance as yf
 
 finnhub_client = finnhub.Client(api_key=getenv("FINNHUB_API"))
 
@@ -76,6 +77,7 @@ def search_view(request):
 
 def info_view(request):
     symbol = request.GET.get('symbol')
+    print(symbol)
     error_message = None
     try:
         info_data=finnhub_client.company_profile2(symbol=symbol)
@@ -84,3 +86,6 @@ def info_view(request):
         info_data=None
         error_message = "No information available. Please try different stock."
     return render(request, 'info.html', {'info_data': info_data,'error_message': error_message})
+
+def turbines_page(request):
+    return render(request, 'map.html')
