@@ -7,7 +7,6 @@ import finnhub
 from economical_data.models import GeneralFinancialData
 from os import getenv
 from .forms import SearchForm
-import yfinance as yf
 
 finnhub_client = finnhub.Client(api_key=getenv("FINNHUB_API"))
 
