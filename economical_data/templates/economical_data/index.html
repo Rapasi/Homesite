@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Professional Links</title>
+    <title>My Homesite</title>
     <link rel="stylesheet" href="{% static 'css/front_page.css' %}">
 </head>
 <body>
@@ -19,8 +19,11 @@
         </div>
         <p>Some links for webpages I have created:</p>
         <div class="links">
+            <p>Some graphs for key ECB interest rates. Data is downloaded using ECB's API.</p>
             <a href="{% url 'display_page' %}" class="link routes">Interest rates</a>
+            <p>Here you can search for information about different stocks. Information is searched using finnhub's API.</p>
             <a href="{% url 'search' %}" class="link routes">Stock Search Tool</a>
+            <p>Here you can see all the wind turbines inside Finland. Map is created using Python's Folium libray and turbine locations are imported from the Area 1 obstacle data published by Fintraffic.</p>
             <a href="{% url 'turbines' %}" class="link routes">Wind Turbine Map</a>
         </div>
     </div>

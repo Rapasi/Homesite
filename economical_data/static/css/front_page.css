@@ -1,36 +1,69 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f4f4f4;
     color: #333;
     margin: 0;
     padding: 0;
     display: flex;
+    flex-direction: column; /* Stack elements vertically */
     justify-content: center;
     align-items: center;
     height: 100vh;
 }
 
+
+p {
+    font-size: 1.1em; 
+    line-height: 1.6; 
+    color: #4a4a4a; 
+    text-shadow: 1px 1px 1px #ddd; 
+    margin-bottom: 20px; 
+}
+
 .container {
-    text-align: center;
+    width: 80%; /* Set a max width for the container */
+    max-width: 1200px; /* Maximum width of the container */
+    margin: 20px auto; /* Center the container */
+    text-align: left; /* Align text to the left */
+    background: white; /* Background color for container */
+    padding: 40px; /* Padding inside the container */
+    border-radius: 10px; /* Rounded corners for the container */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* Subtle shadow for card effect */
 }
 
 h1 {
     color: #333;
+    margin-bottom: 0.5em; /* Space below the header */
 }
 
 .links {
-    margin-top: 20px;
+    margin: 20px 0;
+    padding: 20px;
+    background: #ececec; /* Light grey background for the links section */
+    border-radius: 10px; /* Rounded corners for the links section */
 }
 
+
 .link {
-    display: inline-block;
-    margin: 0 10px;
-    padding: 10px 20px;
+    display: block; /* Make each link block level for better click area */
+    margin: 10px 0; /* Margin around links for spacing */
+    padding: 15px 20px;
+    background-color: #333;
     color: white;
     border-radius: 5px;
     text-decoration: none;
-    transition: background-color 0.3s;
-} 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.link:hover {
+    transform: translateY(-3px); /* Slight raise effect on hover */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Shadow effect on hover */
+}
+
+.github, .linkedin {
+    display: inline-block; /* Align side by side */
+    margin: 0 5px; /* Spacing between inline elements */
+}
 
 .github {
     background-color: #333;
@@ -49,9 +82,11 @@ h1 {
 }
 
 .routes {
-    background-color: #4CAF50; /* Example color */
+    background-color: #4CAF50; 
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); 
+    border: none; 
 }
 
 .routes:hover {
-    background-color: #388E3C; /* Darker shade for hover effect */
+    background-color: #388E3C; 
 }
