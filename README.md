@@ -1,9 +1,11 @@
-# This is the source code for my [homesite](https://rapasi.ddns.net/).
-#### - Website project that includes Django for backend and PostgreSQL for databases. 
-#### -  Frontend is done using HTML, CSS and Javascript. 
+# [My Homesite](https://rapasi.ddns.net/)
+# Overview
+#### This repository contains the source code for my personal website project. The site is built using Django with PostgreSQL for database management, and the frontend is developed with HTML, CSS, and JavaScript.
 
-### Scrape.py file contains code for ECB API access. Interest rates for [/interest_rates](https://rapasi.ddns.net/rates/) are downloaded and saved using that. 
-### Economical_data folder contains all satic files (HTML, CSS etc.) and code for backend database migrations. 
-### Economics folder contains settings and URL routes for Django. 
+# Components
+- Scrape.py: This script interacts with the ECB API to download and save interest rates, which are displayed on the /interest_rates page.
+- Economical_data: This directory contains all static files (HTML, CSS, etc.) as well as backend code for database migrations.
+- Economics: Here you'll find the Django settings and URL route configurations.
 
-
+# Note on Availability
+#### If you can't reach the site, it usually means that my personal server is temporarily off. This should be uncommon (hopefully) but may happen if I'm away for an extended period.
